@@ -1,20 +1,28 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Employee Details
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row style="background-color: lightgrey;">
+      <ion-col size="3"><ion-label>Employee Id</ion-label></ion-col>
+      <ion-col size="3"><ion-label>Employee Name</ion-label></ion-col>
+      <ion-col size="3"><ion-label>Employee Salary</ion-label></ion-col>
+      <ion-col size="3"><ion-label>Department</ion-label></ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row *ngFor="let emp of employees">
+      <ion-col size="3"><ion-label>{{emp.id}}</ion-label></ion-col>
+      <ion-col size="3"><ion-label>{{emp.name}}</ion-label></ion-col>
+      <ion-col size="3"><ion-label>{{emp.salary}}</ion-label></ion-col>
+      <ion-col size="3"><ion-label>{{emp.dept_name}}</ion-label></ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
 </ion-content>
